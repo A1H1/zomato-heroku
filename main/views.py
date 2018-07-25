@@ -79,6 +79,9 @@ class RestaurantView(FormMixin, DetailView):
     model = models.Restaurant
     context_object_name = 'restaurant'
     form_class = forms.ReviewForm
+
+    def get_success_url(self):
+        return reverse('restaurants')
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
