@@ -75,7 +75,7 @@ def add_restraunt(request):
 
 @method_decorator(login_required, name = 'dispatch')
 class RestaurantView(FormMixin, DetailView):
-    template_name = "main/SomethingCool.html"
+    template_name = "main/restaurant.html"
     model = models.Restaurant
     context_object_name = 'restaurant'
     form_class = forms.ReviewForm
